@@ -29,6 +29,13 @@ header {
     bottom: 3rem;
 }
 
+.socials__icon {
+    font-size: 2rem;
+}
+.socials__icon:hover{
+    color: var(--color-primary-variant);
+}
+
 .header__socials::after {
     content: '';
     width: 1px;
@@ -65,7 +72,12 @@ header {
     bottom: 21rem;
     transform: rotate(90deg);
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    font-family: Roboto, sans-serif;
+}
+
+.scroll__down:hover {
+    color: var(--color-primary-variant);
 }
 
 /* ==================== MEDIA QUERIES (MEDIUM DEVICES) ==================== */

@@ -17,14 +17,16 @@
 :root {
     --color-bg: #0f0f0f;
     --color-primary: #adff2f;
+    --color-primary-variant: #db9f14;
     --color-white: white;
     --color-bg-variant: #3b3b3b;
+    
 
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
 
-    --transition: all, 400ms, ease;
+    --transition: all 400ms ease;
 }
 
 html {
@@ -45,11 +47,16 @@ body {
     background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px; */
 
     /* BLACK AND ORANGE */
-    background-color: #0f0f0f;
+    /* background-color: #0f0f0f;
     opacity: 1;
     background: radial-gradient(circle, transparent 20%, #0f0f0f 20%, #0f0f0f 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #0f0f0f 20%, #0f0f0f 80%, transparent 80%, transparent) 92.5px 92.5px, linear-gradient(#db9f14 7.4px, transparent 7.4px) 0 -3.7px, linear-gradient(90deg, #db9f14 7.4px, #0f0f0f 7.4px) -3.7px 0;
-    background-size: 185px 185px, 185px 185px, 92.5px 92.5px, 92.5px 92.5px;
+    background-size: 185px 185px, 185px 185px, 92.5px 92.5px, 92.5px 92.5px; */
 
+    /* BLACK AND ORANGE DARKER */
+    background-color: #0f0f0f;
+    opacity: 1;
+    background: radial-gradient(circle, transparent 20%, #0f0f0f 20%, #0f0f0f 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #0f0f0f 20%, #0f0f0f 80%, transparent 80%, transparent) 100px 100px, linear-gradient(#6d4f0a 8px, transparent 8px) 0 -4px, linear-gradient(90deg, #6d4f0a 8px, #0f0f0f 8px) -4px 0;
+    background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
     /* ORANGE AND BLUE */
     /* background-color: #0141e3;
     opacity: 1;
@@ -88,7 +95,7 @@ section > h2 {
 }
 
 .text-light {
-    color: var(--color-white);
+    color: var(--color-primary-variant);
 }
 
 a {
@@ -112,7 +119,7 @@ a:hover {
 }
 
 .btn:hover {
-    background: var(--color-white);
+    background: var(--color-primary-variant);
     color: var(--color-bg);
     border-color: transparent;
 }
@@ -130,7 +137,11 @@ a:hover {
     background: var(--color-primary);
     color: var(--color-bg);
 }
-
+.btn-primary:hover {
+    background: transparent;
+    color: var(--color-primary-variant);
+    border-color: var(--color-primary-variant);
+}
 img {
     display: block;
     width: 100%;
