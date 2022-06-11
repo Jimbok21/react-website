@@ -56,7 +56,6 @@
 
 .experience__details {
     display: flex;
-    gap: 0.5rem;
     border: 1px solid var(--color-primary-variant);
     background: var(--color-bg);
     border-radius: 1rem;
@@ -65,11 +64,12 @@
     padding-left: 5px;
     padding-right: 5px;
     transition: var(--transition);
-    justify-content: center;;
+    justify-content: center;
 }
 
 .experience__details > div {
-    flex-grow: 1;
+    margin-right: auto;
+    
 }
 
 .experience__details:hover {
@@ -78,6 +78,7 @@
 
 .experience__details-icon {
     margin-top: 3px;
+    margin-right: auto;
 }
 
 /* ==================== MEDIA QUERIES (MEDIUM DEVICES) ==================== */
