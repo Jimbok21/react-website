@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    
+    text-align: center;
 }
 
 .experience__container > div {
@@ -64,6 +64,11 @@
     padding-left: 5px;
     padding-right: 5px;
     transition: var(--transition);
+    justify-content: center;;
+}
+
+.experience__details > div {
+    flex-grow: 1;
 }
 
 .experience__details:hover {
@@ -91,5 +96,10 @@
 @media screen and (max-width: 600px) {
     .experience__container {
         gap: 4rem;
+    }
+
+    .experience__container > div {
+        width: 100%;
+        padding: 2rem 1rem;
     }
 }
