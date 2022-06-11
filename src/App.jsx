@@ -4,6 +4,7 @@ import About from './components/about/About'
 import Projects from './components/projects/Projects'
 import Header from './components/header/Header'
 import Contact from './components/contact/Contact'
+import Skills from './components/skills/Skills'
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         <Header/>
         <Nav/>
         <About/>
+        <Skills/>
         <Projects/>
         <Contact/>
     </>
