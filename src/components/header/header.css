@@ -1,6 +1,7 @@
 header {
-    height: 100vh;
-    padding-top: 7rem;
+    /* change height of just the header. have to do manually or it cuts short */
+    height: 80vh;
+    padding-top: 5rem;
     overflow: hidden;
 }
 
@@ -83,13 +84,13 @@ header {
 /* ==================== MEDIA QUERIES (MEDIUM DEVICES) ==================== */
 @media screen and (max-width: 1024px) {
     header {
-        height: 68vh;
+        height: 75vh;
     }
 }
 
 /* ==================== MEDIA QUERIES (SMALL DEVICES) ==================== */
 @media screen and (max-width: 600px) {
     header {
-        height: 100vh;
+        height: 75vh;
     }
 }

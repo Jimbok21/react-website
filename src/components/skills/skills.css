@@ -2,14 +2,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    
 }
 
 .experience__container > div {
     background: var(--color-bg-variant);
-    padding: 2.4rem 2.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 2rem;
     border: 1px solid var(--color-primary);
     transition: var(--transition);
+    
 }
 
 .experience__container > div:hover {
@@ -18,21 +20,30 @@
     cursor: default;
 }
 
-.experience__container > div h3 {
+.experience__frontend {
     text-align: center;
+}
+
+.experience__backend {
+    text-align: center;
+}
+
+.experience__container > div h3 {
+    display: inline-block;
     transition: var(--transition);
     align-items: center;
-    padding: 10px;
-    transform: translate(40%);
-    margin-bottom: 2rem;
+    padding: top 5px left 5px right 5px;
+    margin-bottom: 1rem;
+    
     color: var(--color-primary);
     border: 1px solid transparent;
     width: fit-content;
-    border-radius: 1rem;
+    border-radius: 0rem;
 }
 
 .experience__container > div:hover h3 {
     background: var(--color-bg);
+    border-bottom: 1px solid var(--color-primary);
 }
 
 .experience__content {
@@ -61,4 +72,24 @@
 
 .experience__details-icon {
     margin-top: 3px;
+}
+
+/* ==================== MEDIA QUERIES (MEDIUM DEVICES) ==================== */
+@media screen and (max-width: 1024px) {
+    .experience__container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience__container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+}
+
+/* ==================== MEDIA QUERIES (SMALL DEVICES) ==================== */
+@media screen and (max-width: 600px) {
+    .experience__container {
+        gap: 4rem;
+    }
 }
