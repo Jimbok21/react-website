@@ -15,11 +15,12 @@
 }
 
 :root {
-    --color-bg: #0f0f0f;
+    --color-bg: rgb(15, 15, 15);
     --color-primary: #adff2f;
     --color-primary-variant: #db9f14;
     --color-white: white;
-    --color-bg-variant: #3b3b3b;
+    --color-bg-variant: rgb(59, 59, 59);
+    --color-bg-variant-semitransparent: rgb(59, 59, 59, 0.5);
     
 
     --container-width-lg: 75%;
