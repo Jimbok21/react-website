@@ -13,7 +13,7 @@ const Projects = () => {
           <div class="card-image"></div>
           <div class="card-text">
             <span class="date">4 days ago</span>
-            <h2>Post One</h2>
+            <h2>Project One</h2>
             <p>This is the description</p>
           </div>
           <div class="card-stats">
@@ -36,7 +36,7 @@ const Projects = () => {
           <div class="card-image"></div>
           <div class="card-text">
             <span class="date">4 days ago</span>
-            <h2>Post Two</h2>
+            <h2>Project Two</h2>
             <p>This is the description</p>
           </div>
           <div class="card-stats">
@@ -59,7 +59,7 @@ const Projects = () => {
           <div class="card-image"></div>
           <div class="card-text">
             <span class="date">4 days ago</span>
-            <h2>Post Three</h2>
+            <h2>Project Three</h2>
             <p>This is the description</p>
           </div>
           <div class="card-stats">
@@ -82,7 +82,7 @@ const Projects = () => {
           <div class="card-image"></div>
           <div class="card-text">
             <span class="date">4 days ago</span>
-            <h2>Post Four</h2>
+            <h2>Project Four</h2>
             <p>This is the description</p>
           </div>
           <div class="card-stats">
@@ -105,7 +105,7 @@ const Projects = () => {
           <div class="card-image"></div>
           <div class="card-text">
             <span class="date">4 days ago</span>
-            <h2>Post Five</h2>
+            <h2>Project Five</h2>
             <p>This is the description</p>
           </div>
           <div class="card-stats">

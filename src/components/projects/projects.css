@@ -29,6 +29,7 @@
     grid-template-rows: 210px 210px 80px;
     grid-template-areas: "image" "text" "stats";
   
+    border: 1px solid var(--color-primary);
     border-radius: 18px;
     background: var(--color-bg-variant);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
@@ -101,4 +102,5 @@
 .card:hover {
     transform: scale(1.2);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    border: 1px solid var(--color-primary-variant);
 }
