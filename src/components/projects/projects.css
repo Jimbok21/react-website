@@ -40,9 +40,8 @@
     cursor: pointer;
     margin: 30px;
 }
-.card-image {
-    grid-area: image;
-    background: url("../../assets/90s\ bg.jpg");
+.card > img {
+    height: 14rem;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: 300px;
