@@ -15,46 +15,51 @@ export const data = [
     date: '4 days ago',
     hours: 10,
     category: 'University',
-    difficulty: 'Hard'
+    difficulty: 'Hard',
+    pattern: 'pattern1'
   },
   {
-    id: 1,
+    id: 2,
     image: IMG2,
     title: 'Project 2',
     description: 'Description 2',
     date: '4 days ago',
     hours: 10,
     category: 'University',
-    difficulty: 'Hard'
+    difficulty: 'Hard',
+    pattern: 'pattern2'
   },
   {
-    id: 1,
+    id: 3,
     image: IMG3,
     title: 'Project 3',
     description: 'Description 3',
     date: '4 days ago',
     hours: 10,
     category: 'University',
-    difficulty: 'Hard'
+    difficulty: 'Hard',
+    pattern: 'pattern3'
   },
   {
-    id: 1,
+    id: 4,
     image: IMG4,
     title: 'Project 4',
     description: 'Description 4',
     date: '4 days ago',
     hours: 10,
     category: 'University',
-    difficulty: 'Hard'
+    difficulty: 'Hard',
+    pattern: 'pattern4'
   },
   {
-    id: 1,
+    id: 5,
     image: IMG5,
     title: 'Project 5',
     description: 'Description 5',
     date: '4 days ago',
     hours: 10,
     category: 'University',
-    difficulty: 'Hard'
+    difficulty: 'Hard',
+    pattern: 'pattern5'
   }
 ]

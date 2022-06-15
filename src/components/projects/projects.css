@@ -48,14 +48,31 @@
 }
 .card-text {
     grid-area: text;
-    margin: 25px;
+    padding: 25px;
 }
+
+.pattern1 {
+    background-image: url(../../assets/low-poly-grid-haikei.svg);
+}
+.pattern2 {
+    background-image: url(../../assets/stacked-steps-haikei.svg);
+}
+.pattern3 {
+    background-image: url(../../assets/polygon-scatter-haikei.svg);
+}
+.pattern4 {
+    background-image: url(../../assets/blob-scatter-haikei.svg);
+}
+.pattern5 {
+    background-image: url(../../assets/stacked-waves-haikei.svg);
+}
+
 .card-text .date {
-    color: var(--color-primary-variant);
+    color: var(--color-primary);
     font-size:13px;
 }
 .card-text p {
-    color: var(--color-primary-variant);
+    color: var(--color-primary);
     font-size:15px;
     font-weight: 300;
 }
