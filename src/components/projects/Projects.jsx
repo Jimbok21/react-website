@@ -6,13 +6,16 @@ import { data } from '../../assets/projects_data.js'
 
 // import 'kute.js';
 // import "https://cdn.jsdelivr.net/kute.js/2.2.2/kute.min.js"
+import KUTE from 'kute.js'
 
-// const tween = KUTE.fromTo(
-//   '#blob1',
-//   { path: '#blob1' },
-//   { path: '#blob2' },
-//   { repeat: 999, duration: 3000, yoyo: true }
-// ).start();
+var tween = KUTE.fromTo(
+  '#blob1',
+  { path: '#blob1' },
+  { path: '#blob2' },
+  { repeat: 999, duration: 3000, yoyo: true }
+)
+tween.start()
+
 
 //javascript to turn data array into cards dynamically
 const Projects = () => {
@@ -57,7 +60,6 @@ const Projects = () => {
           })
         }
       </div>
-      
     </section>
   )
 }
