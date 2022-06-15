@@ -4,11 +4,21 @@ import project from './projects.css'
 //imports the database of projects for the cards
 import { data } from '../../assets/projects_data.js'
 
+// import 'kute.js';
+// import "https://cdn.jsdelivr.net/kute.js/2.2.2/kute.min.js"
+
+// const tween = KUTE.fromTo(
+//   '#blob1',
+//   { path: '#blob1' },
+//   { path: '#blob2' },
+//   { repeat: 999, duration: 3000, yoyo: true }
+// ).start();
 
 //javascript to turn data array into cards dynamically
 const Projects = () => {
   return (
     <section id='projects'>
+      
       <div className='titles'>
         <h5>Get to Know</h5>
         <h2 theme={project}>About Me</h2>
@@ -47,6 +57,7 @@ const Projects = () => {
           })
         }
       </div>
+      
     </section>
   )
 }
