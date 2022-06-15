@@ -1,64 +1,9 @@
 import React from 'react'
 import project from './projects.css'
-import IMG1 from '../../assets/90s bg.jpg'
-import IMG2 from '../../assets/90s bg.jpg'
-import IMG3 from '../../assets/90s bg.jpg'
-import IMG4 from '../../assets/90s bg.jpg'
-import IMG5 from '../../assets/90s bg.jpg'
 
-//data for each project
-const data = [
-  {
-    id: 1,
-    image: IMG1,
-    title: 'Project 1',
-    description: 'Description 1',
-    date: '4 days ago',
-    hours: 10,
-    category: 'University',
-    difficulty: 'Hard'
-  },
-  {
-    id: 1,
-    image: IMG2,
-    title: 'Project 2',
-    description: 'Description 2',
-    date: '4 days ago',
-    hours: 10,
-    category: 'University',
-    difficulty: 'Hard'
-  },
-  {
-    id: 1,
-    image: IMG3,
-    title: 'Project 3',
-    description: 'Description 3',
-    date: '4 days ago',
-    hours: 10,
-    category: 'University',
-    difficulty: 'Hard'
-  },
-  {
-    id: 1,
-    image: IMG4,
-    title: 'Project 4',
-    description: 'Description 4',
-    date: '4 days ago',
-    hours: 10,
-    category: 'University',
-    difficulty: 'Hard'
-  },
-  {
-    id: 1,
-    image: IMG5,
-    title: 'Project 5',
-    description: 'Description 5',
-    date: '4 days ago',
-    hours: 10,
-    category: 'University',
-    difficulty: 'Hard'
-  }
-]
+//imports the database of projects for the cards
+import { data } from '../../assets/projects_data.js'
+
 
 //javascript to turn data array into cards dynamically
 const Projects = () => {
@@ -72,6 +17,7 @@ const Projects = () => {
         {
           data.map(({ id, image, title, description, date, hours, category, difficulty }) => {
             return (
+              //add href to new page when theyre created
               <div class="card" key={id}>
                 <img src={image} alt={title}/>
                 <div class="card-text">
