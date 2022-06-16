@@ -6,15 +6,15 @@ import { data } from '../../assets/projects_data.js'
 
 // import 'kute.js';
 // import "https://cdn.jsdelivr.net/kute.js/2.2.2/kute.min.js"
-import KUTE from 'kute.js'
+// import KUTE from 'kute.js'
 
-var tween = KUTE.fromTo(
-  '#blob1',
-  { path: '#blob1' },
-  { path: '#blob2' },
-  { repeat: 999, duration: 3000, yoyo: true }
-)
-tween.start()
+// var tween = KUTE.fromTo(
+//   '#blob1',
+//   { path: '#blob1' },
+//   { path: '#blob2' },
+//   { repeat: 999, duration: 3000, yoyo: true }
+// )
+// tween.start()
 
 
 //javascript to turn data array into cards dynamically
@@ -23,13 +23,13 @@ const Projects = () => {
     <section id='projects'>
       
       <div className='titles'>
-        <h5>Get to Know</h5>
-        <h2 theme={project}>About Me</h2>
+        <h5>My Work</h5>
+        <h2 theme={project}>Projects</h2>
       </div>
 
       <div class="card-grid">
         {
-          data.map(({ id, image, title, description, date, hours, category, difficulty, pattern }) => {
+          data.map(({ id, image, title, description, date, status, category, difficulty, pattern }) => {
             return (
               //add href to new page when theyre created
               <div class="card" key={id}>
@@ -43,8 +43,8 @@ const Projects = () => {
                 </div>
                 <div class="card-stats">
                   <div class="stat">
-                    <div class="value">{hours}</div>
-                    <div class="type">hours</div>
+                    <div class="value">{status}</div>
+                    <div class="type">status</div>
                   </div>
                   <div class="stat border">
                     <div class="value">{category}</div>

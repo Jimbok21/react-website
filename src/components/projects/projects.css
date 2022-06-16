@@ -52,8 +52,8 @@
 }
 
 .pattern1 {
-    /* background-image: url(../../assets/low-poly-grid-haikei.svg); */
-    background-image: url(../../assets/blob-haikei.svg);
+    background-image: url(../../assets/low-poly-grid-haikei.svg);
+    /* background-image: url(../../assets/blob-haikei.svg); */
 }
 .pattern2 {
     background-image: url(../../assets/stacked-steps-haikei.svg);
@@ -109,12 +109,14 @@
     text-transform: uppercase;
 }
 .card-stats .value{
-    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
     font-weight: 500;
 }
 .card-stats .border {
     outline: dashed;
-    outline-offset: 10px;
+    outline-offset: 0px;
 }
 .card:hover {
     transform: scale(1.2);

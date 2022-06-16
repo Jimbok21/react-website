@@ -13,7 +13,7 @@ export const data = [
     title: 'Project 1',
     description: 'Description 1',
     date: '4 days ago',
-    hours: 10,
+    status: 'Complete',
     category: 'University',
     difficulty: 'Hard',
     pattern: 'pattern1'
@@ -24,7 +24,7 @@ export const data = [
     title: 'Project 2',
     description: 'Description 2',
     date: '4 days ago',
-    hours: 10,
+    status: 'In Progress',
     category: 'University',
     difficulty: 'Hard',
     pattern: 'pattern2'
@@ -35,7 +35,7 @@ export const data = [
     title: 'Project 3',
     description: 'Description 3',
     date: '4 days ago',
-    hours: 10,
+    status: 'Incomplete',
     category: 'University',
     difficulty: 'Hard',
     pattern: 'pattern3'
@@ -46,7 +46,7 @@ export const data = [
     title: 'Project 4',
     description: 'Description 4',
     date: '4 days ago',
-    hours: 10,
+    status: 'Incomplete',
     category: 'University',
     difficulty: 'Hard',
     pattern: 'pattern4'
@@ -57,7 +57,7 @@ export const data = [
     title: 'Project 5',
     description: 'Description 5',
     date: '4 days ago',
-    hours: 10,
+    status: 'Incomplete',
     category: 'University',
     difficulty: 'Hard',
     pattern: 'pattern5'
