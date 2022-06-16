@@ -4,13 +4,15 @@ import './contact.css'
 import { HiOutlineMail } from 'react-icons/hi'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { BsMessenger } from 'react-icons/bs'
-// import Snackbar from '../snackbar/Snackbar';
+import Snackbar from '../snackbar/Snackbar';
 
-// const SnackbarType = {
-//   success: "success",
-//   fail: "fail",
-// };
-// let sucessBool = 'success';
+const SnackbarType = {
+  success: "success",
+  fail: "fail",
+};
+
+let successBool = false;
+
 const Contact = () => {
   const form = useRef();
 
@@ -20,17 +22,17 @@ const Contact = () => {
     emailjs.sendForm('service_gjh8fqp', 'template_7xe2w0a', form.current, 'h02fC6NGz4EenZilh')
       .then((result) => {
         console.log(result.text);
-        // sucessBool = 'success'
+        successBool = true
       }, (error) => {
         console.log(error.text);
-        // sucessBool = 'fail';
+        successBool = false;
       });
 
     e.target.reset();
 
   };
 
-  // const snackbarRef = useRef(null);
+   const snackbarRef = useRef(null);
 
   return (
     <section id='contact'>
@@ -63,7 +65,17 @@ const Contact = () => {
           <input type="text" name='name' placeholder='Your Full Name' required />
           <input type="email" name='email' placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
-          <button type='submit' className='btn btn-primary'>Send Message</button>
+          <button type='submit' className='btn btn-primary' onClick={() => {
+            snackbarRef.current.show();
+          }}>Send Message</button>
+
+          <Snackbar ref={snackbarRef}
+          message={successBool ? "Success" : "Failed"}
+          type={successBool ? SnackbarType.success : SnackbarType.fail}/>
+          {/* <button type='submit' className='btn btn-primary' onClick={() => {
+            snackbarRef.current.show();
+          }}>Send Message</button> */}
+
         </form>
       </div>
     </section>
@@ -72,18 +84,5 @@ const Contact = () => {
 
 export default Contact
 
-// //goes bellow button
-// // {/* <Snackbar
-// //             ref={snackbarRef}
-// //             if (successBool == "success") {
-// //             message = "Task Completed Successfully!"
-// //         type={SnackbarType.success}
-// //         } else {
-// //             message = "Task Failed!"
-// //         type={SnackbarType.fail}
-// //         }
-      
-// //       /> */}
-// //           {/* <button type='submit' className='btn btn-primary' onClick={() => {
-// //             snackbarRef.current.show();
-// //           }}>Send Message</button> */}
+// goes bellow button
+
