@@ -1,10 +1,16 @@
 import React, { useRef } from 'react'
 import emailjs from 'emailjs-com';
 import './contact.css'
-import {HiOutlineMail} from 'react-icons/hi'
-import {AiOutlineWhatsApp} from 'react-icons/ai'
-import {BsMessenger} from 'react-icons/bs'
+import { HiOutlineMail } from 'react-icons/hi'
+import { AiOutlineWhatsApp } from 'react-icons/ai'
+import { BsMessenger } from 'react-icons/bs'
+// import Snackbar from '../snackbar/Snackbar';
 
+// const SnackbarType = {
+//   success: "success",
+//   fail: "fail",
+// };
+// let sucessBool = 'success';
 const Contact = () => {
   const form = useRef();
 
@@ -13,13 +19,18 @@ const Contact = () => {
 
     emailjs.sendForm('service_gjh8fqp', 'template_7xe2w0a', form.current, 'h02fC6NGz4EenZilh')
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
+        // sucessBool = 'success'
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
+        // sucessBool = 'fail';
       });
 
-      e.target.reset();
+    e.target.reset();
+
   };
+
+  // const snackbarRef = useRef(null);
 
   return (
     <section id='contact'>
@@ -29,29 +40,29 @@ const Contact = () => {
       <div className="container contact__container">
         <div className="contact__options">
           <article className="contact__option">
-            <HiOutlineMail className='contact__option-icon'/>
+            <HiOutlineMail className='contact__option-icon' />
             <h4>Email</h4>
             <h5>jimmykells2101@gmail.com</h5>
             <a href="mailto:jimmykells2101@gmail.com" target={"_blank"} rel="noreferrer">Send a message</a>
           </article>
           <article className="contact__option">
-            <AiOutlineWhatsApp className='contact__option-icon'/>
+            <AiOutlineWhatsApp className='contact__option-icon' />
             <h4>Whatsapp</h4>
             <h5>+44 7743 485842</h5>
             <a href="https://api.whatsapp.com/send?phone=+447743485842" target={"_blank"} rel="noreferrer">Send a message</a>
           </article>
           <article className="contact__option">
-            <BsMessenger className='contact__option-icon'/>
+            <BsMessenger className='contact__option-icon' />
             <h4>Messenger</h4>
             <h5>Jimmy Kells</h5>
             <a href="https://m.me/jimmy.kells.75" target={"_blank"} rel="noreferrer">Send a message</a>
           </article>
         </div>
         {/* END OF CONTACT OPTIONS */}
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Your Full Name' required/>
-          <input type="email" name='email' placeholder='Your Email' required/>
-          <textarea type="message" rows="7" placeholder='Your Message' required/>
+        <form ref={form} onSubmit={sendEmail} >
+          <input type="text" name='name' placeholder='Your Full Name' required />
+          <input type="email" name='email' placeholder='Your Email' required />
+          <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
           <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>
       </div>
@@ -60,3 +71,19 @@ const Contact = () => {
 }
 
 export default Contact
+
+// //goes bellow button
+// // {/* <Snackbar
+// //             ref={snackbarRef}
+// //             if (successBool == "success") {
+// //             message = "Task Completed Successfully!"
+// //         type={SnackbarType.success}
+// //         } else {
+// //             message = "Task Failed!"
+// //         type={SnackbarType.fail}
+// //         }
+      
+// //       /> */}
+// //           {/* <button type='submit' className='btn btn-primary' onClick={() => {
+// //             snackbarRef.current.show();
+// //           }}>Send Message</button> */}
