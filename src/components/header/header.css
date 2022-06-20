@@ -33,6 +33,7 @@ header {
 .socials__icon {
     font-size: 2rem;
 }
+
 .socials__icon:hover{
     color: var(--color-primary-variant);
 }
