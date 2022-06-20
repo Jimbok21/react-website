@@ -45,6 +45,21 @@
     color: var(--color-primary-variant);
 }
 
+.success_message {
+    /* width: fit-content; */
+    text-align: center;
+    align-items: center;
+    height: fit-content;
+    
+    border: 1px solid transparent;
+    transition: var(--transition);
+    border-radius: 1.2rem;
+    border-color: var(--color-primary);
+    background-color: var(--color-bg-variant-semitransparent);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 /* ========================= FORM ====================== */
 form {
     display: flex;

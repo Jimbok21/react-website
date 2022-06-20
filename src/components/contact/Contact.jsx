@@ -1,38 +1,44 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import emailjs from 'emailjs-com';
 import './contact.css'
 import { HiOutlineMail } from 'react-icons/hi'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { BsMessenger } from 'react-icons/bs'
-import Snackbar from '../snackbar/Snackbar';
 
-const SnackbarType = {
-  success: "success",
-  fail: "fail",
-};
-
-let successBool = false;
-
-const Contact = () => {
+//sends the email
+const Contact = (props) => {
+  const [successBool, setsuccessBool] = useState('');
   const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs.sendForm('service_gjh8fqp', 'template_7xe2w0a', form.current, 'h02fC6NGz4EenZilh')
       .then((result) => {
-        console.log(result.text);
-        successBool = true
+        console.log("lemon");
+        //sets the mail sent to success
+        setsuccessBool('SUCCESS');
       }, (error) => {
-        console.log(error.text);
-        successBool = false;
+        console.log("lime");
       });
 
     e.target.reset();
 
   };
 
-   const snackbarRef = useRef(null);
+  //resets success to normal again after 5 seconds
+  useEffect(() => {
+    if (successBool === 'SUCCESS') {
+      setTimeout(() => {
+        setsuccessBool('');
+      }, 5000);
+    }
+  }, [successBool]);
+
+
+  const renderAlert = () => (
+    <div className="success_message">
+      <p>Message submitted successfully</p>
+    </div>
+  )
 
   return (
     <section id='contact'>
@@ -62,27 +68,16 @@ const Contact = () => {
         </div>
         {/* END OF CONTACT OPTIONS */}
         <form ref={form} onSubmit={sendEmail} >
+          {successBool && renderAlert()}
           <input type="text" name='name' placeholder='Your Full Name' required />
           <input type="email" name='email' placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
-          <button type='submit' className='btn btn-primary' onClick={() => {
-            snackbarRef.current.show();
-          }}>Send Message</button>
-
-          <Snackbar ref={snackbarRef}
-          message={successBool ? "Success" : "Failed"}
-          type={successBool ? SnackbarType.success : SnackbarType.fail}/>
-          {/* <button type='submit' className='btn btn-primary' onClick={() => {
-            snackbarRef.current.show();
-          }}>Send Message</button> */}
-
+          <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>
       </div>
+      
     </section>
   )
 }
 
 export default Contact
-
-// goes bellow button
-
