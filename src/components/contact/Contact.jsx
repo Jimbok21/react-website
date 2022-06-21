@@ -14,11 +14,11 @@ const Contact = (props) => {
     e.preventDefault();
     emailjs.sendForm('service_gjh8fqp', 'template_7xe2w0a', form.current, 'h02fC6NGz4EenZilh')
       .then((result) => {
-        console.log("lemon");
+        console.log("mail sent successfully");
         //sets the mail sent to success
         setsuccessBool('SUCCESS');
       }, (error) => {
-        console.log("lime");
+        console.log("error with mail");
       });
 
     e.target.reset();

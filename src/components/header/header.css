@@ -1,7 +1,7 @@
 header {
     /* change height of just the header. have to do manually or it cuts short */
     height: 80vh;
-    padding-top: 5rem;
+    padding-top: 1rem;
     overflow: hidden;
 }
 
@@ -67,6 +67,19 @@ header {
     padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
 
+/* ==================== AKASH =========================== */
+.akash > img {
+    background: var(--color-primary);
+    border-radius: 2rem;
+    width: 20rem;
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+    margin: auto auto 2rem auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 /* ==================== SCROLL DOWN ==================== */
 .scroll__down {
     position: absolute;
