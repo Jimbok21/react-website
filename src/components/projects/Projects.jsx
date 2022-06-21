@@ -1,38 +1,31 @@
 import React from 'react'
-import project from './projects.css'
-
+import projects from './projects.css'
+import Modal from '../modal/Modal'
 //imports the database of projects for the cards
 import { data } from '../../assets/projects_data.js'
-
-// import 'kute.js';
-// import "https://cdn.jsdelivr.net/kute.js/2.2.2/kute.min.js"
-// import KUTE from 'kute.js'
-
-// var tween = KUTE.fromTo(
-//   '#blob1',
-//   { path: '#blob1' },
-//   { path: '#blob2' },
-//   { repeat: 999, duration: 3000, yoyo: true }
-// )
-// tween.start()
-
+import { useState } from 'react'
 
 //javascript to turn data array into cards dynamically
 const Projects = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [ID, setID] = useState('')
+
   return (
     <section id='projects'>
-      
       <div className='titles'>
         <h5>My Work</h5>
-        <h2 theme={project}>Projects</h2>
+        <h2 theme={projects}>Projects</h2>
       </div>
 
       <div class="card-grid">
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>{ID}</Modal>
         {
           data.map(({ id, image, title, description, date, status, category, difficulty, pattern }) => {
             return (
+              
               //add href to new page when theyre created
-              <div class="card" key={id}>
+              <div class="card" key={id} onClick={() => {setIsOpen(true); setID(id)}}>
+                
                 <img src={image} alt={title} />
                 <div class={pattern}>
                   <div class="card-text">

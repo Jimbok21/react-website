@@ -10,6 +10,10 @@ footer a {
     color: var(--color-bg);
 }
 
+footer a:hover {
+    color: var(--color-primary-variant);
+}
+
 .footer__logo {
     font-size: 2rem;
     font-weight: 500;
@@ -23,7 +27,9 @@ footer a {
     justify-content: center;
     gap: 2rem;
     margin: 0 auto 3rem;
+    color: red;
 }
+
 
 .footer__socials {
     display: flex;

@@ -16,7 +16,9 @@ export const data = [
     status: 'Complete',
     category: 'University',
     difficulty: 'Hard',
-    pattern: 'pattern1'
+    pattern: 'pattern1',
+    modalDesc: 'This is a much longer description that will be used for the modal',
+    modalImages: [IMG1, IMG2, IMG3]
   },
   {
     id: 2,
@@ -27,7 +29,9 @@ export const data = [
     status: 'In Progress',
     category: 'University',
     difficulty: 'Hard',
-    pattern: 'pattern2'
+    pattern: 'pattern2',
+    modalDesc: 'This is a much longer description that will be used for the modal',
+    modalImages: [IMG1, IMG2, IMG3]
   },
   {
     id: 3,
@@ -38,7 +42,9 @@ export const data = [
     status: 'Incomplete',
     category: 'University',
     difficulty: 'Hard',
-    pattern: 'pattern3'
+    pattern: 'pattern3',
+    modalDesc: 'This is a much longer description that will be used for the modal',
+    modalImages: [IMG1, IMG2, IMG3]
   },
   {
     id: 4,
@@ -49,7 +55,9 @@ export const data = [
     status: 'Incomplete',
     category: 'University',
     difficulty: 'Hard',
-    pattern: 'pattern4'
+    pattern: 'pattern4',
+    modalDesc: 'This is a much longer description that will be used for the modal',
+    modalImages: [IMG1, IMG2, IMG3]
   },
   {
     id: 5,
@@ -60,6 +68,8 @@ export const data = [
     status: 'Incomplete',
     category: 'University',
     difficulty: 'Hard',
-    pattern: 'pattern5'
+    pattern: 'pattern5',
+    modalDesc: 'This is a much longer description that will be used for the modal',
+    modalImages: [IMG1, IMG2, IMG3]
   }
 ]

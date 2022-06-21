@@ -6,7 +6,7 @@ import {SiFiverr} from 'react-icons/si'
 const Footer = () => {
   return (
     <footer>
-        <a href="/#" className='footer__logo'>LOGO</a>
+        <a href="/#" className='footer__logo'>Jimbok21</a>
         <ul className='permalinks'>
             <li><a href="/#">Home</a></li>
             <li><a href="#about">About</a></li>
