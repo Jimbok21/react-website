@@ -1,5 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react'
-import emailjs from 'emailjs-com';
+import React from 'react'
+import { useRef, useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser';
 import './contact.css'
 import { HiOutlineMail } from 'react-icons/hi'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
@@ -69,9 +70,6 @@ const Contact = (props) => {
         {/* END OF CONTACT OPTIONS */}
         <form ref={form} onSubmit={sendEmail} >
           {successBool && renderAlert()}
-          {/* <div className="success_message">
-            <p>Message submitted successfully</p>
-          </div> */}
           <input type="text" name='name' placeholder='Your Full Name' required />
           <input type="email" name='email' placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
