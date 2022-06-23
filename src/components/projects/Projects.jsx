@@ -1,14 +1,24 @@
 import React from 'react'
 import projects from './projects.css'
-import Modal from '../modal/Modal'
+// import Modal from '../modal/Modal'
 //imports the database of projects for the cards
 import { data } from '../../assets/projects_data.js'
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
+
+
+
 
 //javascript to turn data array into cards dynamically
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [ID, setID] = useState('')
+
+
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    }
+  }, [isOpen])
 
   return (
     <section id='projects'>
@@ -16,16 +26,18 @@ const Projects = () => {
         <h5>My Work</h5>
         <h2 theme={projects}>Projects</h2>
       </div>
+      <button onClick={() => {setIsOpen(true)}}>Trigger Modal</button>
 
       <div class="card-grid">
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}>{ID}</Modal>
+      {/* <Modal open={isOpen} onClose={() => setIsOpen(false)}>{ID}</Modal> */}
+      
         {
           data.map(({ id, image, title, description, date, status, category, difficulty, pattern }) => {
             return (
               
               //add href to new page when theyre created
-              <div class="card" key={id} onClick={() => {setIsOpen(true); setID(id)}}>
-                
+              // <div class="card" key={id} onClick={() => {setIsOpen(true); setID(id)}}>
+              <div class="card" key={id}>
                 <img src={image} alt={title} />
                 <div class={pattern}>
                   <div class="card-text">
