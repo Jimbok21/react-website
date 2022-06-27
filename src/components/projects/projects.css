@@ -141,4 +141,43 @@
 
 /* ====================== MODAL =================================*/
 
-
+.mymodal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+  }
+  
+  .myoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0f0f0f;
+    opacity: 1;
+    background: radial-gradient(circle, transparent 20%, #0f0f0f 20%, #0f0f0f 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #0f0f0f 20%, #0f0f0f 80%, transparent 80%, transparent) 100px 100px, linear-gradient(#6d4f0a 8px, transparent 8px) 0 -4px, linear-gradient(90deg, #6d4f0a 8px, #0f0f0f 8px) -4px 0;
+    background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .ReactModal__Overlay {
+    opacity: 0;
+    
+  }
+  
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+    
+  }
+  
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
